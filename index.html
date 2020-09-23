@@ -19,9 +19,44 @@
         <form action="">
             <input type="text" class="new project" placeholder="new project" aria label="new project" />
             <button class="addbtn" aria-label="create project">+</button>
+            <button id='remove-project'>remove project</button>
         </form>
     </div>
-    <div class="to-do"></div>
+    <div class="to-do">
+        <div class="header">
+            <h1> Exercise</h1>
+            <p class="remaining">2 remaining
+            </p>
+        </div>
+        <div class="tasks">
+            <div class="task">
+                <input type="checkbox" id="task1" />
+                <label for="task1">
+                        <span class="custom-checkbox"></span> to-do 1
+                    </label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task2" />
+                <label for="task2">
+                        <span class="custom-checkbox"></span> to-do 2
+                    </label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task3" />
+                <label for="task3">
+                        <span class="custom-checkbox"></span> to-do 3
+                </label>
+            </div>
+        </div>
+        <div class="newtask">
+            <input type="text" class="new project" placeholder="new project" aria label="new project" />
+            <button class="addbtn" aria-label="create project">+</button>
+        </div>
+        <div class="delete-tasks">
+            <button class="delete-complete-tasks"> Clear Completed Tasks</button>
+            <button class="delete-tasks"> Clear all tasks</button>
+        </div>
+    </div>
 </body>
 
 </html>
