@@ -4,27 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>To-do list</title>
 </head>
 
 <body>
-    <h1> To-do list</h1>
+    <h1 class="title"> To-do list</h1>
     <div class="projects">
-        <h3 class="projects-title">My Projects</h3>
+        <h2 class="projects-title">My Projects</h2>
         <ul class="projects-lists">
             <li class="active"> Exercise</li>
             <li> Shopping</li>
             <li> Coding</li>
         </ul>
         <form action="">
-            <input type="text" class="new project" placeholder="new project" aria label="new project" />
-            <button class="addbtn" aria-label="create project">+</button>
+            <button class="addbtn" aria-label="create project">+</button> <input type="text" class="new-project" placeholder="New Project" aria label="new project" />
+            <br>
             <button id='remove-project'>remove project</button>
         </form>
     </div>
     <div class="to-do">
         <div class="header">
-            <h1> Exercise</h1>
+            <h3> Exercise</h3>
             <p class="remaining">2 remaining
             </p>
         </div>
@@ -33,13 +34,13 @@
                 <input type="checkbox" id="task1" />
                 <label for="task1">
                         <span class="custom-checkbox"></span> to-do 1
-                    </label>
+                </label>
             </div>
             <div class="task">
                 <input type="checkbox" id="task2" />
                 <label for="task2">
                         <span class="custom-checkbox"></span> to-do 2
-                    </label>
+                 </label>
             </div>
             <div class="task">
                 <input type="checkbox" id="task3" />
@@ -49,8 +50,8 @@
             </div>
         </div>
         <div class="newtask">
-            <input type="text" class="new project" placeholder="new project" aria label="new project" />
-            <button class="addbtn" aria-label="create project">+</button>
+            <input type="text" class="new-task" placeholder="New Task" aria label="new task" />
+            <button class="add-task" aria-label="create task">+</button>
         </div>
         <div class="delete-tasks">
             <button class="delete-complete-tasks"> Clear Completed Tasks</button>
