@@ -33,6 +33,7 @@ main {
 
 .add-task,
 .add-project {
+    cursor: pointer;
     border-radius: 10px;
     background-color: #0d122bd1;
     border: none;
@@ -44,22 +45,41 @@ main {
 }
 
 .projects-container {
-    top: 0;
+    /* border: 1px solid green; */
+    /* margin-left: -23px; */
 }
 
-#projects {
+.modal {
+    /* display: none;
+     /* top: 0; */
+    /* top: 50%;
+    left: 50%; */
+    /* overflow: auto; */
+    height: 100%;
+    width: 100%;
     display: none;
+    left: 0;
     flex-direction: column;
     align-items: start;
+    position: fixed;
     background-color: #192043;
-    /* top: 5%;
-    left: 50%; */
     height: 150px;
     width: 300px;
     box-sizing: border-box;
     color: white;
     border-radius: 5px;
-    z-index: 2;
+    z-index: 1;
+}
+
+.project-form span {
+    font-size: 32px;
+    margin-left: 222px;
+    margin-top: -37px;
+    cursor: pointer;
+}
+
+.project-form span:hover {
+    color: red;
 }
 
 .project-form {
@@ -89,7 +109,7 @@ main {
     font-weight: bold;
 }
 
-#task-form {
+.modal2 {
     display: none;
     flex-direction: column;
     align-items: start;
@@ -104,6 +124,16 @@ main {
     z-index: 2;
     /* margin: 167px auto; */
     /* margin: 3px auto; */
+}
+
+.task-close {
+    float: right;
+    font-size: 40px;
+    margin-top: -22px;
+}
+
+.task-close:hover {
+    color: red;
 }
 
 .task-submit-btn {

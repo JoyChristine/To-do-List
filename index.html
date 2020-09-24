@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="./css/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="./css/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css"> -->
     <title>Document</title>
 </head>
 
@@ -18,11 +18,14 @@
                 <h2 class="title"> My projects</h2>
                 <button class="add-project">Add project</button>
             </div>
-            <div id="projects">
+            <div class="modal" id="my-modal">
                 <form class="project-form">
-                    <label for="title">Project Name </label> <br>
+                    <label for="title">Project Name </label>
+                    <span class="form-close">&times;
+                        </span><br>
                     <input type="text" name="name" id="name">
                     <div class="projects-btn">
+
                         <button type="button" class="project-submit-btn">Submit</button>
                         <!-- <button type="button" class="project-cancel-btn">Cancel</button> -->
                     </div>
@@ -45,27 +48,30 @@
                 <li> Shopping</li>
                 <li> Coding</li>
             </ul>
-            <div id="task-form">
-                <form name="TaskForm">
-                    <label for="title">Task Title : </label>
-                    <input type="text" name="title" id="title"> <br> <br>
-                    <label for="description">Description : </label>
-                    <textarea rows="5" cols="40" name="description"></textarea> <br> <br>
-                    <label for="date">Select Date : </label>
-                    <input type="date" name="date" id="date" value="yyyy-dd-mm">
+            <div class="modal2" id=" task-form ">
+                <form name="TaskForm ">
+                    <span class="task-close">&times;
+                </span>
+                    <label for="title ">Task Title : </label>
+                    <input type="text " name="title " id="title "> <br> <br>
+                    <label for="description ">Description : </label>
+                    <textarea rows="5 " cols="40 " name="description "></textarea> <br> <br>
+                    <label for="date ">Select Date : </label>
+                    <input type="date " name="date " id="date " value="yyyy-dd-mm ">
                     <br> <br>
-                    <label for="priority"> Select Priority : </label>
-                    <select name="priority" class="select-priority"><option>low</option><option>normal</option><option>high</option>
+                    <label for="priority "> Select Priority : </label>
+                    <select name="priority " class="select-priority "><option>low</option><option>normal</option><option>high</option>
                     <option>urgent</option></select>
-                    <br> <br> <label for="notes">Notes : </label><textarea rows="5" cols="40" name="notes"></textarea>
-                    <div class="tasks-btn">
-                        <button type="button" class="task-submit-btn">Submit</button>
-                        <!-- <button type="button" class="task-cancel-btn">Cancel</button> -->
+                    <br> <br> <label for="notes ">Notes : </label><textarea rows="5 " cols="40 " name="notes "></textarea>
+                    <div class="tasks-btn ">
+                        <button type="button " class="task-submit-btn ">Submit</button>
+                        <!-- <button type="button " class="task-cancel-btn ">Cancel</button> -->
                     </div>
                 </form>
             </div>
         </div>
     </main>
+    <script src="todo.js "></script>
 </body>
 
 </html>
