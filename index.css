@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: cursive;
+    font-weight: 200;
+    font-size: 1rem;
+    background-color: cadetblue;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    height: 100%;
+    overflow: hidden;
+}
+
+.to-do {
+    margin-top: -33px;
+    background-color: #0d122bd1;
+    /* top: 0;
+    bottom: 0;
+    left: 0; */
+    text-align: center;
+    font-size: calc(7vw + 2rem);
+    font-weight: 400;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 2em;
+}
+
+.add-task,
+.add-project {
+    border-radius: 10px;
+    background-color: #0d122bd1;
+    border: none;
+    padding: 11px 28px;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+.projects-container {
+    top: 0;
+}
+
+#projects {
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    background-color: #192043;
+    /* top: 5%;
+    left: 50%; */
+    height: 150px;
+    width: 300px;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.project-form {
+    margin-block-start: 1em;
+    margin-inline-start: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+#name {
+    width: 200px;
+}
+
+.projects-btn {
+    margin: 22px
+}
+
+.project-submit-btn {
+    border-radius: 10px;
+    background-color: #f8ecff;
+    border: none;
+    margin-inline-start: -20px;
+    padding: 11px 28px;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+#task-form {
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    width: 352px;
+    padding: 25px 20px 30px;
+    background-color: #192043;
+    top: 50%;
+    left: 50%;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 5px;
+    z-index: 2;
+    /* margin: 167px auto; */
+    /* margin: 3px auto; */
+}
+
+.task-submit-btn {
+    border-radius: 10px;
+    background-color: #f8ecff;
+    border: none;
+    /* margin-inline-start: -20px; */
+    padding: 11px 28px;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
