@@ -3,75 +3,137 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <!-- <link rel="stylesheet" href="./css/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css"> -->
     <title>Document</title>
 </head>
 
 <body>
-    <h1 class="to-do">To-do List</h1>
-    <main>
-        <div class="projects-container">
-
-            <div class="project-container">
-                <h2 class="title"> My projects</h2>
-                <button class="add-project">Add project</button>
+    <div class="container">
+        <div class="sidebar">
+            <div class="lists">
+                <div class="lists-header"><img src="img/lists.png">Project</div>
+                <ul id="ul-lists"></ul>
+                <ul>
+                    <li class="add-list">
+                        <input class="add-list-input" type="text" placeholder="New Project">
+                    </li>
+                </ul>
             </div>
-            <div class="modal" id="my-modal">
-                <form class="project-form">
-                    <label for="title">Project Name </label>
-                    <span class="form-close">&times;
-                        </span><br>
-                    <input type="text" name="name" id="name">
-                    <div class="projects-btn">
-
-                        <button type="button" class="project-submit-btn">Submit</button>
-                        <!-- <button type="button" class="project-cancel-btn">Cancel</button> -->
-                    </div>
-                </form>
+            <div class="sort"><img src="img/sort.png">
+                <div class="sort-header">Sort</div>
+                <div class="sort-options">
+                    <div class="sort-priority"><img src="img/flag.png">Priority <span id="priority-sorting"></span></div>
+                    <div class="sort-alphabetical"><img src="img/alphabet.png">Alphabetical<span id="alphabetical-sorting"></span></div>
+                    <div class="sort-duedate"><img src="img/clock.png">Due Date<span id="duedate-sorting"></span></div>
+                </div>
             </div>
 
-            <ul class="projects-lists">
-                <li class="active"> Exercise</li>
-                <li> Shopping</li>
-                <li> Coding</li>
-            </ul>
+            <div class="filter">
+                <div class="filter-header"><img src="img/filter.png">Filter</div>
+
+                <div class="filter-options">
+                    <div class="filter-all"><img src="img/all.png">View All <span id="filter-viewall"></span></div>
+                    <div class="filter-priority"><img src="img/flag.png">Priority <span id="filter-by-priority"></span></div>
+                </div>
+            </div>
+
+
+
+            <!-- <div class="labels">
+                <img src="img/tag.png">Labels
+                <div class="labels-side-container">
+                </div>
+            </div> -->
         </div>
-        <div class="tasks-container">
+
+
+        <div class="main">
+            <div class="options-bar"></div>
+            <div class="list-header">Personal</div>
+
             <div class="task-container">
-                <h2 class="title"> Tasks</h2>
-                <button class="add-task">Add Task</button>
             </div>
-            <ul class="Tasks-lists">
-                <li class="active"> Exercise</li>
-                <li> Shopping</li>
-                <li> Coding</li>
-            </ul>
-            <div class="modal2" id=" task-form ">
-                <form name="TaskForm ">
-                    <span class="task-close">&times;
-                </span>
-                    <label for="title ">Task Title : </label>
-                    <input type="text " name="title " id="title "> <br> <br>
-                    <label for="description ">Description : </label>
-                    <textarea rows="5 " cols="40 " name="description "></textarea> <br> <br>
-                    <label for="date ">Select Date : </label>
-                    <input type="date " name="date " id="date " value="yyyy-dd-mm ">
-                    <br> <br>
-                    <label for="priority "> Select Priority : </label>
-                    <select name="priority " class="select-priority "><option>low</option><option>normal</option><option>high</option>
-                    <option>urgent</option></select>
-                    <br> <br> <label for="notes ">Notes : </label><textarea rows="5 " cols="40 " name="notes "></textarea>
-                    <div class="tasks-btn ">
-                        <button type="button " class="task-submit-btn ">Submit</button>
-                        <!-- <button type="button " class="task-cancel-btn ">Cancel</button> -->
-                    </div>
-                </form>
+
+            <div class="add-task">
+                <input class="input-task" type="text" placeholder="Type your task in here.">
+                <button class="add-task-button">Go</button>
             </div>
         </div>
-    </main>
-    <script src="todo.js "></script>
+
+
+        <div class="task-modal">
+
+            <div class="modal-header">Task</div>
+
+            <div class="labels-container">
+                <h1>Description</h1>
+                <div class="label-list">
+                    <input class="label-input" type="text" placeholder="+ New">
+
+                </div>
+            </div>
+
+            <div class="duedate-container">
+                <h1>DUE DATE</h1>
+                <input class="duedate-calendar" type="datetime-local">
+
+            </div>
+
+            <div class="priority-container">
+
+                <h1>PRIORITY</h1>
+                <div class="priorities">
+                    <div id="low-priority"><img src="img/files-green.png">Low</div>
+                    <div id="med-priority"><img src="img/files-yellow.png">Medium</div>
+                    <div id="high-priority"><img src="img/files-red.png">High</div>
+
+                </div>
+            </div>
+
+            <div class="notes-container">
+                <h1>NOTES</h1>
+                <textarea placeholder="Add your notes here"></textarea>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="blur-container">
+
+        <div class="edit-list-modal">
+            <h1>Project Name</h1>
+            <input class="list-edit-input" type="text">
+            <div class="edit-list-buttons">
+                <div class="cancel-edit-list">
+                    <p>Cancel</p>
+                </div>
+                <div class="save-list">
+                    <p>Save</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="delete-list-modal">
+            <h1>Warning</h1>
+            <p> All tasks assigned to this project will also be deleted.</p>
+            <div class="delete-list-buttons">
+                <div class="cancel-delete-list">
+                    <p>Cancel</p>
+                </div>
+                <div class="delete-list">
+                    <p>Delete</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
